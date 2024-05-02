@@ -22,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 12;
 
     // Table names and columns
+    //-----------------student table----------------------
     private static final String TABLE_STUDENTS = "Students";
     private static final String COLUMN_ID = "id";
     private static final String COLUMN_NAME = "name";
@@ -38,6 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String COLUMN_REGISTER = "Rdate";
 
+    //--------------------New course table
     private static final String TABLE_NEW_COURSES = "NewCourses";
 
     private static final String COLUMN_COURSE_ID = "course_id";
@@ -52,7 +54,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_STUDENT_COUNT = "student_count";
     private static final String COLUMN_CURRENT_STUDENT_COUNT = "current_student_count";
 
-
+    //------------enrollments--------------------------------------------
     private static final String TABLE_ENROLLMENTS = "Enrollments";
     private static final String COLUMN_ENROLLMENT_ID = "enrollment_id";
     private static final String COLUMN_STUDENT_EMAIL = "student_email";

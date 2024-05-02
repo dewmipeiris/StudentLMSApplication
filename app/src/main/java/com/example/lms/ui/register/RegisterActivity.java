@@ -1,10 +1,13 @@
 package com.example.lms.ui.register;
 
+
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,6 +21,7 @@ import com.example.lms.ui.Database.DatabaseHelper;
 import com.example.lms.ui.Database.Model.Student;
 import com.example.lms.ui.home.CourseActivity;
 import com.example.lms.ui.home.CourseenrollActivity;
+import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     RadioGroup radioGroupGender;
     RadioButton radioButtonMale, radioButtonFemale, radioButtonOther;
     Button registerButton, loginButton;
+    DatePickerDialog datePickerDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         registerButton = findViewById(R.id.buttonRegister);
         loginButton = findViewById(R.id.buttonLogin);
+
+        // Set OnClickListener for Date of Birth EditText
+        editTextDob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,4 +118,27 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+    // Method to show DatePickerDialog
+    private void showDatePickerDialog() {
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialog = new DatePickerDialog(
+                this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        String date = dayOfMonth + "/" + (month + 1) + "/" + year;
+                        editTextDob.setText(date);
+                    }
+                },
+                year,
+                month,
+                dayOfMonth
+        );
+        datePickerDialog.show();
+    }
 }
+

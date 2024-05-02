@@ -95,18 +95,18 @@ public class CourseenrollActivity extends AppCompatActivity implements OnMapRead
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputCode = code.getText().toString(); // Get the text from EditText code
-                if ("M563432".equals(inputCode)) { // Compare with desired value
+                String inputCode = code.getText().toString();
+                if ("M563432".equals(inputCode)) {
                     fee = (float) (cfeeValue * 0.25);
-                    String feeMessage = "Discount is: " + fee; // Construct the message
+                    String feeMessage = "Discount is: " + fee;
                     Toast.makeText(CourseenrollActivity.this, feeMessage, Toast.LENGTH_SHORT).show(); // Display fee message
                 } else if ("S663435".equals(inputCode)) {
                     fee = (float) (cfeeValue * 0.40);
-                    String feeMessage = "Discount is: " + fee; // Construct the message
+                    String feeMessage = "Discount is: " + fee;
                     Toast.makeText(CourseenrollActivity.this, feeMessage, Toast.LENGTH_SHORT).show(); // Display fee message
                 } else if ("L763434".equals(inputCode)) {
                     fee = (float) (cfeeValue * 0.60);
-                    String feeMessage = "Discount is: " + fee; // Construct the message
+                    String feeMessage = "Discount is: " + fee;
                     Toast.makeText(CourseenrollActivity.this, feeMessage, Toast.LENGTH_SHORT).show(); // Display fee message
                 }
 

@@ -159,7 +159,7 @@ public class LoginActivity extends AppCompatActivity {
         String enteredCode = confirmCodeEditText.getText().toString();
         String userEmail = emailEditText.getText().toString().trim();
 
-        if(userEmail.equals("malinahara44@gmail.com") && Integer.parseInt(enteredCode) == sentCode){
+        if(userEmail.equals("janidupasan2@gmail.com") && Integer.parseInt(enteredCode) == sentCode){
             navigateToAdminActivity();
         }
         else if (!enteredCode.isEmpty() && Integer.parseInt(enteredCode) == sentCode) {

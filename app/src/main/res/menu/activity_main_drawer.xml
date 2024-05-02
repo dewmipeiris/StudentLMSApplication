@@ -4,17 +4,23 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_home"
-
+            android:textColor="#FFFFFF"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-
+            android:textColor="#FFFFFF"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-
+            android:textColor="#FFFFFF"
             android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:textColor="#FFFFFF"
+            android:title="@string/menu_contact" />
     </group>
 </menu>
