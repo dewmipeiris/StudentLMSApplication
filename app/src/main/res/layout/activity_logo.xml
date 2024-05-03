@@ -6,55 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".ui.LogoActivity">
 
+    <!-- Image above the logo -->
+
+    <!-- Logo -->
+
+    <!-- Admin button -->
+
+    <!-- Guest button -->
+
+    <!-- Image below the buttons -->
+
+    <!-- User Role TextView -->
+
+    <ImageView
+        android:id="@+id/imageAboveLogo"
+        android:layout_width="407dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/aboveapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="401dp"
-        android:layout_height="221dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="385dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408"
+        app:layout_constraintTop_toBottomOf="@id/imageAboveLogo"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/guestbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="88dp"
-        android:text="Gusest"
-        android:background="@color/sharpblue"
-        app:layout_constraintStart_toEndOf="@+id/adminbtn"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:id="@+id/adminbtn"
+        android:layout_width="118dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="44dp"
+        android:text="Admin"
+        android:textColor="@color/sharpblue"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
 
     <Button
-        android:id="@+id/adminbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="123dp"
-        android:text="Admin"
-        android:background="@color/sharpblue"
-        app:layout_constraintEnd_toStartOf="@+id/guestbtn"
+        android:id="@+id/guestbtn"
+        android:layout_width="127dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="248dp"
+        android:text="Guest"
+        android:textColor="@color/sharpblue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageBelowButtons"
+        android:layout_width="809dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="472dp"
+        android:src="@drawable/top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@id/guestbtn"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="186dp"
-        android:layout_marginBottom="274dp"
+        android:layout_marginTop="552dp"
         android:text="User Role"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@id/imageBelowButtons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
